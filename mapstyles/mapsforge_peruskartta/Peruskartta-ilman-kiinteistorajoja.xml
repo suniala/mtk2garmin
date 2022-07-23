@@ -3,20 +3,6 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd"
              version="1" map-background="#FFFFFF">
-    <stylemenu id="r4menu" defaultvalue="parcelsno" defaultlang="fi">
-
-        <layer id="parcelsyes" visible="true">
-            <name lang="en" value="Parcels"/>
-            <name lang="fi" value="Kiinteistorajat"/>
-            <cat id="parcels"/>
-        </layer>
-
-        <layer id="parcelsno" visible="true">
-            <name lang="en" value="No parcels"/>
-            <name lang="fi" value="Ei kiinteistorajoja"/>
-        </layer>
-    </stylemenu>
-
 
     <rule e="way" k="tyyppi" v="tieviiva">
         <pathText k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF" stroke-width="4"
@@ -106,30 +92,6 @@
                  stroke-width="2"/>
     </rule>
     <rule e="any" k="kohdeluokka" v="36101" zoom-min="14">
-        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
-                 stroke-width="2"/>
-    </rule>
-    <rule e="any" k="kohdeluokka" v="12101" zoom-min="14">
-        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
-                 stroke-width="2"/>
-    </rule>
-    <rule e="any" k="kohdeluokka" v="12301" zoom-min="14">
-        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
-                 stroke-width="2"/>
-    </rule>
-    <rule e="any" k="kohdeluokka" v="14201" zoom-min="14">
-        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
-                 stroke-width="2"/>
-    </rule>
-    <rule e="any" k="kohdeluokka" v="16101" zoom-min="14">
-        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
-                 stroke-width="2"/>
-    </rule>
-    <rule e="any" k="kohdeluokka" v="42101" zoom-min="14">
-        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
-                 stroke-width="2"/>
-    </rule>
-    <rule e="any" k="kohdeluokka" v="42201" zoom-min="14">
         <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
                  stroke-width="2"/>
     </rule>
@@ -412,13 +374,10 @@
 
     <!-- polku -->
     <rule e="way" k="highway" v="path|footway|trail" zoom-min="13">
-        <line stroke="#0000ff" stroke-width="0.5" stroke-dasharray="6,2" stroke-linecap="butt"/>
+        <line stroke="#0000ff" stroke-width="0.5" stroke-dasharray="4,2" stroke-linecap="butt"/>
     </rule>
     <rule e="way" k="kohdeluokka" v="12313" zoom-min="13">
-        <line stroke="#000000" stroke-width="0.5" stroke-dasharray="6,2" stroke-linecap="butt"/>
-        <rule e="way" k="paallyste" v="2">
-            <line stroke="#000000" stroke-width="2.5" stroke-dasharray="2,20" stroke-linecap="butt"/>
-        </rule>
+        <line stroke="#000000" stroke-width="0.5" stroke-dasharray="4,2" stroke-linecap="butt"/>
     </rule>
 
 
@@ -467,7 +426,7 @@
 
             <rule e="way" k="kohdeluokka" v="12121">
                 <line stroke="#000000" stroke-width="2.5" stroke-linecap="butt"/>
-                <rule e="way" k="paallyste" v="2">
+                <rule e="way" k="paallyste" v="~">
                     <line stroke="#C00000" stroke-width="1.25" stroke-linecap="butt"/>
                 </rule>
                 <rule e="way" k="paallyste" v="0|1">
@@ -480,7 +439,7 @@
 
             <rule e="way" k="kohdeluokka" v="12122">
                 <line stroke="#000000" stroke-width="2.5" stroke-linecap="butt"/>
-                <rule e="way" k="paallyste" v="2">
+                <rule e="way" k="paallyste" v="~">
                     <line stroke="#C00000" stroke-width="1.25" stroke-linecap="butt"/>
                 </rule>
                 <rule e="way" k="paallyste" v="0|1">
@@ -493,7 +452,7 @@
 
             <rule e="way" k="kohdeluokka" v="12131" zoom-min="12">
                 <line stroke="#000000" stroke-width="1.75" stroke-linecap="butt"/>
-                <rule e="way" k="paallyste" v="2">
+                <rule e="way" k="paallyste" v="~">
                     <line stroke="#C00000" stroke-width="1.25" stroke-linecap="butt"/>
                 </rule>
                 <rule e="way" k="paallyste" v="0|1">
@@ -506,7 +465,7 @@
 
             <rule e="way" k="kohdeluokka" v="12132" zoom-min="12">
                 <line stroke="#000000" stroke-width="1.75" stroke-linecap="butt"/>
-                <rule e="way" k="paallyste" v="2">
+                <rule e="way" k="paallyste" v="~">
                     <line stroke="#C00000" stroke-width="1.25" stroke-linecap="butt"/>
                 </rule>
                 <rule e="way" k="paallyste" v="0|1">
@@ -685,11 +644,6 @@
     <rule e="way" k="tyyppi" v="rajavyohykkeentakaraja"> <!-- rajavyohykkeentakaraja -->
         <line stroke="#4d00ff" stroke-width="1.5" stroke-dasharray="2,5" stroke-linecap="butt"/>
     </rule>
-
-    <rule cat="parcels" e="way" k="tyyppi" v="kiinteistoraja"> <!-- kiinteistoraja -->
-        <line stroke="#ff0000" stroke-width="0.3" stroke-linecap="butt"/>
-    </rule>
-
 
     <rule e="way" k="kohdeluokka" v="36312" zoom-min="14">
         <line stroke="#118AED" stroke-width="0.4" stroke-linecap="butt"/>
